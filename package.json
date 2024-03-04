@@ -1,0 +1,34 @@
+{
+  "name": "ActiveMQ-NodeJs-Example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "license": "AGPL-version-3.0",
+  "private": false,
+  "engines": {
+    "node": "20.x.x",
+    "npm": "10.x.x"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": "",
+  "keywords": [],
+  "author": {
+    "name": "Pavlo Sukhnin",
+    "email": "psykhinin@gmail.com"
+  },
+  "contributors": [],
+  "scripts": {
+    "01:listen": "node --env-file=.env ./examples/amqp/01-hello-world/listen.js",
+    "01:send": "node --env-file=.env ./examples/amqp/01-hello-world/send.js",
+    "dev": "",
+    "test": ""
+  },
+  "dependencies": {
+    "rhea-promise": "3.0.1"
+  }
+}
