@@ -6,7 +6,7 @@ import {
 } from "../handlers/handlers.js";
 import { handleMessage } from "./handle-message.js";
 
-const { HELLO_QUEUE: helloQueue = "hello_queue" } = process.env;
+const { DELAYED_QUEUE = "delayed_queue" } = process.env;
 
 // The name displayed in the Connections tab in the ActiveMQ Web Console.
 const RECEIVER_NAME = `receiver-${Math.random().toString(36).substring(2, 5)}`;
@@ -15,7 +15,8 @@ const connection = establishConnection({ containerId: RECEIVER_NAME });
 
 const receiverOptions = {
   source: {
-    address: helloQueue,
+    address: DELAYED_QUEUE,
+    durable: true,
   },
   onSessionError: handleReceiverSessionError({
     receiverName: RECEIVER_NAME,

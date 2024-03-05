@@ -25,10 +25,17 @@
   "scripts": {
     "01:listen": "node --env-file=.env ./examples/amqp/01-hello-world/listen.js",
     "01:send": "node --env-file=.env ./examples/amqp/01-hello-world/send.js",
+    "02:listen": "node --env-file=.env ./examples/amqp/02-messages-with-delay/listen.js",
+    "02:send": "node --env-file=.env ./examples/amqp/02-messages-with-delay/send.js",
+    "03:listen": "node --env-file=.env ./examples/amqp/03-mixed-delayed-and-not/listen.js",
+    "03:send": "node --env-file=.env ./examples/amqp/03-mixed-delayed-and-not/send.js",
+    "04:listen": "node --env-file=.env ./examples/amqp/04-messages-deduplication/listen.js",
+    "04:send": "node --env-file=.env ./examples/amqp/04-messages-deduplication/send.js",
     "dev": "",
     "test": ""
   },
   "dependencies": {
+    "redis": "4.6.13",
     "rhea-promise": "3.0.1"
   }
 }

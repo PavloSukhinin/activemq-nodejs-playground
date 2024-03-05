@@ -4,7 +4,9 @@ services:
   activemq:
     container_name: activemq-test
     hostname: localhost
-    image: apache/activemq-classic:5.17.6
+    build: 
+      context: .
+      dockerfile: activemq.Dockerfile
     ports:
       - 61616:61616
       - 8161:8161
@@ -14,3 +16,7 @@ services:
       - ./activemq/data:/data/activemq
       - ./activemq/log:/var/log/activemq
     restart: on-failure
+  redis:
+    image: redis:7.0
+    ports:
+      - 6379:6379
