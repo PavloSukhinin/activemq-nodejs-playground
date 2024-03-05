@@ -1,7 +1,7 @@
 import { Connection } from "rhea-promise";
 
 const {
-  AMQP_HOST: host = "host",
+  AMQP_HOST: host = "localhost",
   AMQP_USERNAME: username = "guest",
   AMQP_PASSWORD: password = "guest",
   AMQP_PORT,
